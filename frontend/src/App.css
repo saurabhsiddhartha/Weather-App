@@ -9,10 +9,10 @@
   flex-direction: column;
   align-items: center;
   height: 100vh;
-  background: linear-gradient(rgb(97, 131, 139), rgb(88, 74, 23));
+  background: linear-gradient(rgba(27, 23, 23, 0.884),rgba(47, 45, 45, 0.93));
   padding-top: 3%; /* Position content 5% from the top */
    
-  border : 2px solid red
+  /* border : 2px solid red */
 }
 
 h1 {
@@ -54,20 +54,93 @@ button:hover {
 }
 
 .temp-container{
+  display: flex;
+  justify-content: space-evenly;
   padding: 20px;
   margin-top: 2%;
   width: 100%;
   height: 70%; 
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 
-.temp-main-container{
+.temp-main-container{ 
+   color: white;
+   padding: 8px;
    width: 400px;
-   height: 100%;
-   margin-left: 10%;
-   border: 2px solid navajowhite;
+   height: 100%; 
+   background-color: #2b2929;
+   box-shadow: #aaaaaa;
+   /* border: 2px solid navajowhite; */
+}
+.temp-detail{
+  margin: 10px 0 10px 0;
+  display: flex;
+  justify-content: space-between; 
+  
+}
+.detail{
+  width: 200px;
+  padding:5px 0 10px 50px ;
+  font-size: 2.5rem;
+  height: 10vh; 
+}
+.cloud-status{
+  font-size: 4rem;
+  margin-bottom: 0 0 15px 10px;
+  padding: auto;
+  width: 120px; 
+}
+#day-status{
+  font-size: 1.3rem;
+}
+#icon-distance{
+  color: rgba(155, 153, 153, 0.972);
+  margin-right: 5px;
+}
+.grid-container{ 
+  display: grid;
+  justify-content: center; 
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 60%;
+  /* border: 2px solid red; */
+}
+.grid{
+  margin: auto;
+  /* border-bottom: 2px solid white; */
+  width: 100px;
+  height: 10vh;
+}
+.grid h3{
+    font-size: 1rem;
+    color: #898484;
+}
+#grid-detail{
+    font-size: 2rem;
 }
 
+.weekly-container{
+  color: white;
+   padding: 8px;
+   width: 400px;
+   display: grid;
+   height: 100%; 
+   background-color: #2b2929;
+   box-shadow: #aaaaaa;
+   text-align: center;
+}
+hr{
+  height: 0;
+  
+}
+.forecast-grid{
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 9vh;
+  /* border: 2px solid red; */
+  text-align: center;
+}
 @media screen and (min-width: 768px) {
   h1 {
     font-size: 2.5rem;
