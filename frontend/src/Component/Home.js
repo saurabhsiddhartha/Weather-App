@@ -83,6 +83,7 @@ const Home = () => {
                     <TempCard city={city} apikey={api_key} weatherDetail={weatherDetail} weather={weather} iconUrl={iconUrl} forecastDetail={forecastDetail} place={place} windSpeed ={windSpeed}/>
                 )}
             </div>
+            
         </>
     );
 }
