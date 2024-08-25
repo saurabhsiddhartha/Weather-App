@@ -1,22 +1,20 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
 }
 
 .cover-page {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
-  background: linear-gradient(rgba(27, 23, 23, 0.884),rgba(47, 45, 45, 0.93));
-  padding-top: 3%; /* Position content 5% from the top */
-   
-  /* border : 2px solid red */
+  max-height: 100%;
+  background: linear-gradient(rgba(207, 181, 113, 0.884), rgba(95, 183, 206, 0.93));
+  padding-top: 3%;
 }
 
 h1 {
-  margin-bottom: 20px;
+  margin-bottom: 1.5rem;
   font-size: 2rem;
   color: #fff;
 }
@@ -25,136 +23,119 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  max-width: 80%;
-  border: 2px solid yellow;
+  width: 90%;
+  max-width: 800px;
 }
 
 input {
-  width: 70%;
-  padding: 1rem;
+  flex: 1;
+  padding: 0.75rem;
   border-radius: 5px 0 0 5px;
   border: 1px solid #ccc;
-  font-size: 1rem; 
+  font-size: 1rem;
 }
 
 button {
-  width: 30%;
-  padding: 1rem;
-  border-radius: 0 5px 5px 0; 
+  padding: 0.75rem;
+  border-radius: 0 5px 5px 0;
   border: none;
   background-color: #5c6bc0;
   color: white;
   font-size: 1rem;
   cursor: pointer;
+  flex-shrink: 0;
 }
 
 button:hover {
   background-color: #3949ab;
 }
 
-.temp-container{
-  display: flex;
-  justify-content: space-evenly;
-  padding: 20px;
-  margin-top: 2%;
-  width: 100%;
-  height: 70%; 
-  /* border: 2px solid red; */
-}
-
-.temp-main-container{ 
-   color: white;
-   padding: 8px;
-   width: 400px;
-   height: 100%; 
-   background-color: #2b2929;
-   box-shadow: #aaaaaa;
-   /* border: 2px solid navajowhite; */
-}
-.temp-detail{
-  margin: 10px 0 10px 0;
-  display: flex;
-  justify-content: space-between; 
-  
-}
-.detail{
-  width: 200px;
-  padding:5px 0 10px 50px ;
-  font-size: 2.5rem;
-  height: 10vh; 
-}
-.cloud-status{
-  font-size: 4rem;
-  margin-bottom: 0 0 15px 10px;
-  padding: auto;
-  width: 120px; 
-}
-#day-status{
-  font-size: 1.3rem;
-}
-#icon-distance{
-  color: rgba(155, 153, 153, 0.972);
-  margin-right: 5px;
-}
-.grid-container{ 
-  display: grid;
-  justify-content: center; 
-  grid-template-columns: 1fr 1fr 1fr;
-  height: 60%;
-  /* border: 2px solid red; */
-}
-.grid{
-  margin: auto;
-  /* border-bottom: 2px solid white; */
-  width: 100px;
-  height: 10vh;
-}
-.grid h3{
-    font-size: 1rem;
-    color: #898484;
-}
-#grid-detail{
-    font-size: 2rem;
-}
-
-.weekly-container{
-  color: white;
-   padding: 8px;
-   width: 400px;
-   display: grid;
-   height: 100%; 
-   background-color: #2b2929;
-   box-shadow: #aaaaaa;
-   text-align: center;
-}
-hr{
-  height: 0;
-  
-}
-.forecast-grid{
-  padding: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  height: 9vh;
-  /* border: 2px solid red; */
-  text-align: center;
-}
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 
-  .search-container {
-    max-width: 600px;
+  .temp-container {
+    flex-direction: row;
+    
   }
 
-  input {
-    width: 75%;
+  .temp-main-container,
+  .weekly-container {
+    margin-bottom: 0;
+    /* height: 666px; */
+    height: 100vh;
+  }
+  /* .temp-main-container{
+    width: 80%;
+  } */
+}
+
+@media screen and (max-width: 767px) {
+  h1 {
+    font-size: 1.75rem;
   }
 
-  button {
-    width: 25%;
+  .temp-main-container, .weekly-container {
+    width: 90%;
+  }
+
+  input, button {
+    font-size: 0.875rem;
+    padding: 0.5rem;
+  }
+
+  .temp-detail {
+    /* flex-direction: column; */
+    align-items: flex-start;
+  }
+
+  .detail {
+    font-size: 1.5rem;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+
+  #grid-detail {
+    font-size: 1.25rem;
+  }
+
+  .weekly-container {
+    margin-top: 2rem;
+  }
+
+  .forecast-grid {
+    padding: 0.5rem;
+    height: auto;
+  }
+
+  #temp-font {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .temp-main-container, .weekly-container {
+    width: 90%;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .forecast-grid {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #temp-font {
+    font-size: 1rem;
   }
 }
